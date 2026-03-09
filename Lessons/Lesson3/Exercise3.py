@@ -14,6 +14,6 @@ first_half_of_numbers_list = numbers[: middle]
 second_half_of_numbers_list = numbers[middle :]
 renewed_numbers = [first_half_of_numbers_list, second_half_of_numbers_list]
 print(f"Numbers list is: numbers = {numbers}")
-print(f"Renewed number list is: renewed_numbers = {renewed_numbers}")
+print(f"Renewed number list is: renewed_numbers ={renewed_numbers}")
 
 
