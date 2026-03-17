@@ -10,7 +10,24 @@
 
 У результаті перевірки на друк виводиться або True, якщо таке ім'я змінної допустимо, або False - якщо ні.
 
-Приклади імен змінних та результат перевірки (=> на друк виводити не потрібно :))"""
+Приклади імен змінних та результат перевірки (=> на друк виводити не потрібно :))
+
+_ => True
+__ => False
+___ => False
+x => True
+get_value => True
+get value => False
+get!value => False
+some_super_puper_value => True
+Get_value => False
+get_Value => False
+getValue => False
+3m => False
+m3 => True
+assert => False
+assert_exception => True
+"""
 
 import string
 import keyword
@@ -40,8 +57,7 @@ else:
     if user_input in keyword.kwlist:
         is_valid = False
 
-    _count = user_input.count("_")
-    if _count > 1:
+    if user_input.replace("_", "") == "" and len(user_input)> 1:
         is_valid = False
 
 
